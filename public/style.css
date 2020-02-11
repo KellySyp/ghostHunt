@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo|Just+Me+Again+Down+Here|Permanent+Marker|Rock+Salt');
+.main{
+	background: linear-gradient(to left, #336600 0%, #333300 100%);
+	overflow: hidden;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.Cell{
+    float: left;
+    height: 45px;
+    width: 45px;
+	text-align: center;
+    cursor: pointer;
+	margin: 5px;
+	padding-top: 0px;
+	font-size: 34px;
+	border-radius: 30px 30px 0px 0px;
+	border-top: 2px solid black;
+}
+
+.Board{
+	width: 440px;
+	text-align: center;
+}
+
+/* Types of graves */
+.graveClose{
+	background-color: #333;
+}
+
+.graveOpen{
+	background-color: #aaa;
+}
+
+.flagged{
+	background-color: #007ca9;
+}
+
+.ghosted{
+	background-color: #a00;
+}
+
+/*Banner */
+.Banner{
+	font-size: 32px;
+	background: rgb(159,113,81);
+	background: linear-gradient(0deg, rgba(159,113,81,1) 32%, rgba(184,147,25,1) 51%, rgba(159,113,81,1) 78%);
+	margin: 5px;
+	border-radius: 50px/10px;
+}
+
+/* Button/Sign*/
+.button{
+	text-align: center;
+	font-size: 36px;
+	background: rgb(159,113,81);
+	background: linear-gradient(0deg, rgba(159,113,81,1) 32%, rgba(184,147,25,1) 51%, rgba(159,113,81,1) 78%);
+	margin: 10px;
+}
+
+.button:hover{
+	background-color: #c1810b;
+}
+
+.button:active{
+	background-color: #c1b20c;
+}
+
+/*ghost*/
+.box{
+	top: 22px;
+	left: 22px;
+	display: block;
+	width: 0px;
+	height: 0px;
+}
+.body{
+	position: relative;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 50%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+}
+.eye{
+	position: relative;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 50%;
+	width: 25%;
+	height: 25%;
+}
+.leftEye{
+	top: 20%;
+	left: 20%;
+}
+
+.rightEye{
+	top: -5%;
+	left: 60%;
+}
+
+.mouth{
+	position: relative;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 50% 50% 0 0;
+	width: 50%;
+	height: 25%;
+	top: 10%;
+	left: 25%;
+}
+
+.hand{
+	position: relative;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 50%;
+	width: 40%;
+	height: 40%;
+}
+.leftHand{
+	top: -40%;
+	left: -30%;
+}
+.rightHand{
+	top: -80%;
+	left: 90%;
+}
+.tail{
+	position: relative;
+	width: 0;
+	height: 0;	
+	border-bottom: 100px solid rgba(255,255,255,0.3);
+	border-left: 100px solid transparent;
+}
+
+.animate>* {
+	-webkit-animation-name: haunted; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: haunted;
+    animation-duration: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes haunted {
+    from {
+		width: 0px;
+		height: 0px;
+	}
+    to {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+/* Standard syntax */
+@keyframes haunted {
+    from {
+		width: 0px;
+		height: 0px;
+		left: 0px;
+		top: 0px;
+	}
+    to {
+		width: 500px;
+		height: 500px;
+		left: -250px;
+		top: -250px;
+	}
+}
